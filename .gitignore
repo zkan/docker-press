@@ -16,3 +16,8 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+db_data/
+db_data_dev/
+db_data_test/
+
+*.swp
