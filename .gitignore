@@ -1,6 +1,10 @@
 *.log
 wordpress/wp-config.php
+wordpress/wp-config-sample.php
+wordpress/.htaccess
 wordpress-develop/wp-config.php
+wordpress-develop/wp-config-sample.php
+wordpress-develop/.htaccess
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
