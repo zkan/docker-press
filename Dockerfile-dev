@@ -1,0 +1,10 @@
+FROM wordpress:4.9.4
+
+RUN apt-get update && apt-get install -y curl
+
+RUN curl -L -o ~/phpunit.phar https://phar.phpunit.de/phpunit-4.8.phar \
+  && chmod +x ~/phpunit.phar \
+  && mv ~/phpunit.phar /usr/local/bin/phpunit
+
+COPY conf/wp-config.php /var/www/html
+COPY conf/wp-tests-config.php /var/www/html

@@ -1,0 +1,41 @@
+version: '2'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./db_data_dev:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  db_test:
+    image: mysql:5.7
+    volumes:
+      - ./db_data_test:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress_test
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    image: docker-press-develop:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile-dev
+    volumes:
+      - ./wordpress-develop:/var/www/html
+    ports:
+      - 8070:80
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_PASSWORD: wordpress
+    depends_on:
+      - db
+      - db_test
