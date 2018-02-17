@@ -4,7 +4,7 @@ DockerPress makes WordPress developers life easier to develop & test WordPress t
 
 ![](https://s.w.org/images/backgrounds/wordpress-bg-medblue.png)
 
-## Installation
+## Getting Started
 
 ```sh
 docker-compose up
@@ -19,13 +19,21 @@ After running Docker, visit [localhost:8069](http://localhost:8069) to start Wor
 See how we can create a patch [here](https://make.wordpress.org/core/handbook/contribute/git/#patches) then run the following commands:
 
 ```sh
-git clone git://develop.git.wordpress.org/ wordpress-develop
-docker-compose -f docker-compose.dev.yml up
+$ git clone git://develop.git.wordpress.org/ wordpress-develop
+$ docker-compose -f docker-compose.dev.yml up
 ```
+
+**Note:** Add `--build` for the first time.
 
 After running docker, visit [localhost:8070](http://localhost:8070).
 
-**Note:** Add `--build` for the first time.
+### Running PHPUnit for WordPress
+
+```sh
+$ cp conf/wp-tests-config.php wordpress-develop
+$ docker-compose exec wordpress bash
+$ phpunit
+```
 
 ## Contributing to This Repo
 
