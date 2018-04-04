@@ -19,8 +19,4 @@ wordpress/sitemap.xml.gz
 
 wordpress-develop/
 
-db_data/
-db_data_dev/
-db_data_test/
-
 *.swp

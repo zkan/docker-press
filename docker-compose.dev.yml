@@ -4,7 +4,7 @@ services:
   db:
     image: mysql:5.7
     volumes:
-      - ./db_data_dev:/var/lib/mysql
+      - db-data-dev:/var/lib/mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: wordpress
@@ -15,7 +15,7 @@ services:
   db_test:
     image: mysql:5.7
     volumes:
-      - ./db_data_test:/var/lib/mysql
+      - db-data-test:/var/lib/mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: wordpress
@@ -31,7 +31,7 @@ services:
     volumes:
       - ./wordpress-develop:/var/www/html
     ports:
-      - 8070:80
+      - 8088:80
     restart: always
     environment:
       WORDPRESS_DB_HOST: db
@@ -39,3 +39,7 @@ services:
     depends_on:
       - db
       - db_test
+
+volumes:
+  db-data-dev:
+  db-data-test:
