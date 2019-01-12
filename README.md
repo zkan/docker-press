@@ -1,6 +1,9 @@
 # DockerPress
 
-DockerPress makes WordPress developers life easier to develop & test WordPress themes and plugins or even create a patch to submit to WordPress.org!
+DockerPress makes WordPress developers life easier to develop & test WordPress
+themes and plugins or even create a patch to submit to WordPress.org! This
+project uses the test tools from the [wordpress-develop
+repository](https://github.com/WordPress/wordpress-develop).
 
 ![](https://s.w.org/images/backgrounds/wordpress-bg-medblue.png)
 
@@ -12,11 +15,15 @@ docker-compose up
 
 **Note:** Add `--build` for the first time.
 
-After running Docker, visit [localhost:8069](http://localhost:8069) to start WordPress. For more information about WordPress installation, please refer to the [Installing WordPress](https://codex.wordpress.org/Installing_WordPress/).
+After running Docker, visit [localhost:8069](http://localhost:8069) to start
+WordPress. For more information about WordPress installation, please refer to
+the [Installing WordPress](https://codex.wordpress.org/Installing_WordPress/).
 
 ## Contributing to WordPress.org
 
-See how we can create a patch [here](https://make.wordpress.org/core/handbook/contribute/git/#patches) then run the following commands:
+See how we can create a patch
+[here](https://make.wordpress.org/core/handbook/contribute/git/#patches) then
+run the following commands:
 
 ```sh
 $ git clone git://develop.git.wordpress.org/ wordpress-develop
