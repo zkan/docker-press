@@ -15,7 +15,7 @@ docker-compose up
 
 **Note:** Add `--build` for the first time.
 
-After running Docker, visit [localhost:8069](http://localhost:8069) to start
+After running Docker, visit [localhost:8088](http://localhost:8088) to start
 WordPress. For more information about WordPress installation, please refer to
 the [Installing WordPress](https://codex.wordpress.org/Installing_WordPress/).
 
@@ -32,7 +32,7 @@ $ docker-compose -f docker-compose.dev.yml up
 
 **Note:** Add `--build` for the first time.
 
-After running docker, visit [localhost:8070](http://localhost:8070).
+After running docker, visit [localhost:8088](http://localhost:8088).
 
 ### Running PHPUnit for WordPress
 
